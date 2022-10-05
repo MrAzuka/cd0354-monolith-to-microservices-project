@@ -5,4 +5,4 @@ const router: Router = Router();
 
 router.use("/feed", FeedRouter);
 
-export const FeedRouter: Router = router;
+export const FeedsRouter: Router = router;

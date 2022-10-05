@@ -3,7 +3,7 @@ import express from "express";
 import { sequelize } from "./sequelize";
 
 import { AuthRouter } from "./controllers/v0/auth.router";
-import { FeedRouter } from "./controllers/v0/feed.router";
+import { FeedsRouter } from "./controllers/v0/feed.router";
 
 import bodyParser from "body-parser";
 import { config } from "./config/config";
@@ -41,7 +41,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 	);
 
 	app.use("/api/v0/user", AuthRouter);
-	app.use("/api/v0/feed", FeedRouter);
+	app.use("/api/v0/feed", FeedsRouter);
 
 	// Root URI call
 	app.get("/", async (req, res) => {
